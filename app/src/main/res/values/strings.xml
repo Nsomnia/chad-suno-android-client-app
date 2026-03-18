@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChadSuno</string>
+    <string name="library_title">Library</string>
+    <string name="create_title">Create</string>
+    <string name="settings_title">Settings</string>
+</resources>
