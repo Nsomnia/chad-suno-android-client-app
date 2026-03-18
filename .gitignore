@@ -13,7 +13,6 @@ captures/
 .externalNativeBuild/
 .cxx/
 *.aab
-*.apk
 output-metadata.json
 
 # IntelliJ
@@ -32,7 +31,10 @@ google-services.json
 
 # Android Profiling
 *.hprof
-3party/suno-api
 
 # third-party repos
 3party/
+
+# Keep debug APK for easy distribution
+!app-debug.apk
+!*.apk
