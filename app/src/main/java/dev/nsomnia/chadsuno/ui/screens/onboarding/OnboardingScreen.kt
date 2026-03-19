@@ -223,24 +223,26 @@ fun HowToGetTokenCard() {
 
                 Text(
                     text = """
-Method 1: From Browser (Recommended)
+Method 1: From Browser URL (Easiest)
 1. Open suno.com in Chrome/Firefox
 2. Log in to your account
-3. Press F12 (Developer Tools)
-4. Go to "Network" tab
-5. Refresh page or create a song
-6. Click any request to suno.com
-7. Find "Cookie" in Request Headers
-8. Copy the entire cookie value
+3. Look at the URL bar after login
+4. Find __clerk_handshake= in the URL
+5. Copy the ENTIRE token (starts with eyJ)
+6. Paste it here - ChadSuno extracts the cookies
 
-Method 2: From Official App
-1. Use a packet capture app
-2. Look for requests to suno.com
-3. Extract the Authorization header
+Method 2: From Browser DevTools
+1. Open suno.com and login
+2. Press F12 (Developer Tools)
+3. Go to "Application" > "Local Storage"
+4. Find suno.com and look for JWT tokens
+5. Copy any token starting with eyJ
 
-Method 3: Full Cookie String
-Paste the entire cookie string from your browser.
-ChadSuno will extract what it needs.
+Method 3: Run in Browser Console
+Copy and run this in browser console on suno.com:
+document.cookie.match(/eyJ[^;]+/)?.[0]
+
+Paste the handshake JWT - ChadSuno will parse it!
                     """.trimIndent(),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
